@@ -1,8 +1,8 @@
-
+#include "philo.h"
 
 int	validate_args(t_data *data, int ac)
 {
-	if (data->num_philos < 1 || data->num_philos > 200)
+	if (data->num_philos < 1 || data->num_philos > INT_MAX)
 		return (0);
 	if (data->time_to_die < 0 || data->time_to_eat < 0)
 		return (0);
