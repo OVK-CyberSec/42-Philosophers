@@ -20,6 +20,11 @@ static int	init_mutexes(t_data *data)
 
 int	init_data(t_data *data, int ac, char **av)
 {
+	if (!parse_inputs(ac, av))
+	{
+		printf("Error: Invalid arguments\n");
+		return (1);
+	}
 	parse_args(data, ac, av);
 	if (!validate_args(data, ac))
 	{
