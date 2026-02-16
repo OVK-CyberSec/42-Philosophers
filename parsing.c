@@ -26,7 +26,7 @@ int	is_int_range(char *str)
 	while (str[i])
 	{
 		result = result * 10 + (str[i] - '0');
-		if (result > INT_MAX)
+		if (result > 200)
 			return (0);
 		i++;
 	}
@@ -35,7 +35,7 @@ int	is_int_range(char *str)
 
 int	validate_args(t_data *data, int ac)
 {
-	if (data->num_philos < 1 || data->num_philos > INT_MAX)
+	if (data->num_philos < 1 || data->num_philos > 200)
 		return (0);
 	if (data->time_to_die < 0 || data->time_to_eat < 0)
 		return (0);
