@@ -47,8 +47,11 @@ int		init_philos(t_data *data);
 int		init_forks(t_data *data);
 
 /* Parsing */
+int	is_numeric(char *str);
+int	is_int_range(char *str);
 int	validate_args(t_data *data, int ac);
 void	parse_args(t_data *data, int ac, char **av);
+int	parse_inputs(int ac, char **av);
 
 /* Threads */
 int		create_threads(t_data *data);
