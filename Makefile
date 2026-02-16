@@ -6,6 +6,7 @@ RM = rm -f
 
 SRCS = main.c \
        init.c \
+	   parsing.c \
        utils.c \
        actions.c \
        threads.c \
