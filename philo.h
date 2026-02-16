@@ -45,6 +45,10 @@ int		init_data(t_data *data, int ac, char **av);
 int		init_philos(t_data *data);
 int		init_forks(t_data *data);
 
+/* Parsing */
+int	validate_args(t_data *data, int ac);
+void	parse_args(t_data *data, int ac, char **av);
+
 /* Threads */
 int		create_threads(t_data *data);
 void	*philosopher_routine(void *arg);
