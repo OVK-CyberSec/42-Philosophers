@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parsing.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mohifdi <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/16 19:20:58 by mohifdi           #+#    #+#             */
+/*   Updated: 2026/02/16 19:22:20 by mohifdi          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "philo.h"
 
 int	is_numeric(char *str)
@@ -10,23 +22,6 @@ int	is_numeric(char *str)
 	while (str[i])
 	{
 		if (str[i] < '0' || str[i] > '9')
-			return (0);
-		i++;
-	}
-	return (1);
-}
-
-int	is_int_range(char *str)
-{
-	long	result;
-	int		i;
-
-	result = 0;
-	i = 0;
-	while (str[i])
-	{
-		result = result * 10 + (str[i] - '0');
-		if (result > 200)
 			return (0);
 		i++;
 	}
@@ -64,13 +59,14 @@ int	parse_inputs(int ac, char **av)
 
 	if (ac != 5 && ac != 6)
 		return (0);
-
-	i = 1;
+	if (ft_atoi(av[1]) > 200)
+		return (0);
+	i = 2;
 	while (i < ac)
 	{
 		if (!is_numeric(av[i]))
 			return (0);
-		if (!is_int_range(av[i]))
+		if (ft_atoi(av[i]) > INT_MAX)
 			return (0);
 		i++;
 	}

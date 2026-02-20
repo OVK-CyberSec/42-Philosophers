@@ -1,6 +1,6 @@
 # Philosophers
 
-*This project has been created as part of the 42 curriculum.*
+*This project has been created as part of the 42 curriculum by mohifdi.*
 
 ## Description
 
@@ -39,9 +39,9 @@ make
 
 ### Cleanup
 ```bash
-make clean   # Remove object files
-make fclean  # Remove object files and executable
-make re      # Rebuild everything
+make clean
+make fclean
+make re    
 ```
 
 ## Features
@@ -79,20 +79,6 @@ A dedicated monitor thread continuously checks:
 ## Resources
 
 ### Technical Documentation
-- [POSIX Threads Programming](https://computing.llnl.gov/tutorials/pthreads/)
+- [A Simple Guide to "The Dining Philosopher" Problem](https://www.youtube.com/watch?v=Dt51GebwNR0)
 - [pthread man pages](https://man7.org/linux/man-pages/man7/pthreads.7.html)
 - [The Dining Philosophers Problem](https://en.wikipedia.org/wiki/Dining_philosophers_problem)
-
-### Articles and Tutorials
-- Understanding mutex and thread synchronization
-- Deadlock prevention strategies
-- Race condition detection techniques
-
-### AI Usage
-AI tools were used to:
-- Explain threading concepts and pthread functions
-- Review synchronization strategies for race conditions
-- Debug timing precision issues
-- Suggest code structure improvements
-
-The core logic, algorithm design, and implementation were done independently with AI serving as a reference and debugging assistant.

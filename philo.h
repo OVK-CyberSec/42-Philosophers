@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   philo.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mohifdi <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/16 19:21:03 by mohifdi           #+#    #+#             */
+/*   Updated: 2026/02/16 19:23:03 by mohifdi          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PHILO_H
 # define PHILO_H
 
@@ -47,11 +59,10 @@ int		init_philos(t_data *data);
 int		init_forks(t_data *data);
 
 /* Parsing */
-int	is_numeric(char *str);
-int	is_int_range(char *str);
-int	validate_args(t_data *data, int ac);
+int		is_numeric(char *str);
+int		validate_args(t_data *data, int ac);
 void	parse_args(t_data *data, int ac, char **av);
-int	parse_inputs(int ac, char **av);
+int		parse_inputs(int ac, char **av);
 
 /* Threads */
 int		create_threads(t_data *data);
